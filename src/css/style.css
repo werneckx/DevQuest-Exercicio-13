@@ -7,7 +7,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: gray;
+    background-color: lightgray;
 }
 
 .cartao {
@@ -23,16 +23,76 @@ body {
 
 
     background-color: white;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.20);
 
     position: relative;
 }
 
 .cartao .ilustracao {
-    /* width: 293px;
-    height: 100%;
-    background-size: cover; */
+    width: 293px;
+    background-size: cover;
 
     position: absolute;
-    left: -5;
+    left: -5%;
+}
+
+.cartao .perguntas {
+    margin-left: 250px;
+    width: 100%;
+}
+
+.cartao .perguntas .titulo {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: black;
+    margin-bottom: 15px;
+}
+
+/* PERGUNTA */
+
+.cartao .perguntas .container-pergunta {
+    padding: 15px 0;
+    border-bottom: 1px solid #D4D4D4;
+}
+
+.cartao .perguntas .container-pergunta:last-child {
+    border-bottom: none;
+}
+
+.cartao .perguntas .container-pergunta .titulo-pergunta {
+    font-size: 1.7rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cartao .perguntas .container-pergunta .titulo-pergunta::after {
+    content: '';
+    background-image: url("../images/seta-fechada.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    width: 15px;
+    height: 20px;
+    margin-left: 10px;
+    display: inline-block;
+}
+
+.cartao .perguntas .container-pergunta .resposta-pergunta {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-top: 10px;
+    display: none;
+}
+
+/* PERGUNTA ABERTA */
+
+.cartao .perguntas .container-pergunta.aberto .titulo-pergunta::after {
+    background-image: url("../images/seta-aberta.png");
+}
+
+.cartao .perguntas .container-pergunta.aberto .resposta-pergunta {
+    display: block;
 }
